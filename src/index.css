@@ -24,6 +24,10 @@ code {
     monospace;
 }
 
+a {
+  cursor: pointer;
+}
+
 .desktopBackground {
   display: flex;
   background-color: var(--pm);
@@ -49,10 +53,13 @@ a {
 }
 
 .startButton {
+  font-family: Mitr;
   background-color: var(--sd);
   color: white;
   border: 0;
   padding: 10px;
+  margin: 10px;
+  min-width: 40%;
   border-radius: 10px;
   font-size: large;
 }
@@ -70,4 +77,30 @@ footer {
   width: 100%;
   color: rgba(255, 255, 255, 0.5);
   text-align: center;
+}
+
+.login__input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login__input {
+  text-align: center;
+  font-family: Mitr;
+  font-size: 30px;
+  color: white;
+  border: none;
+  border-bottom: 2px solid #D1D1D4;
+  background: none;
+  padding: 10px;
+  padding-left: 24px;
+  font-weight: 700;
+  width: 50%;
+  transition: .2s;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+  outline: none;
+  border-bottom-color: var(--sd);
 }
