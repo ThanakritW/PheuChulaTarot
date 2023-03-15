@@ -39,7 +39,7 @@ function Animated() {
                     transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
                 >
                     <img src={logo} style={{ height: 200 }}></img>
-                    <h1>พรรคเพื่อจุฬา ฯ {page}</h1>
+                    <h1>พรรคเพื่อจุฬา ฯ</h1>
                     <a href="https://www.instagram.com/pheuchula_party/"><h2> <FaInstagram /> instagram</h2></a>
                     <motion.button
                         whileHover={{ scale: 1.1 }}
@@ -62,7 +62,10 @@ function Animated() {
                     <img src={logo} style={{ height: 200 }}></img>
                     <h1>PheuChula</h1>
                     <a href="https://www.instagram.com/pheuchula_party/"><h2> <FaInstagram /> instagram</h2></a>
-                    <button onClick={() => setPage((page => page + 1))}>click here go to test</button>
+                    <button whileHover={{ scale: 1.1 }}
+                        onHoverStart={e => { }}
+                        onHoverEnd={e => { }}
+                        className="startButton" onClick={() => setPage((page => page + 1))}>click here get back</button>
                 </motion.div >
             );
         }
