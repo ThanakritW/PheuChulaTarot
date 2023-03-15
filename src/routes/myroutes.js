@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Soon from "../pages/Soon";
-import Test from "../pages/Test";
+import { BrowserRouter, Routes, Route, useLocation, Router } from "react-router-dom";
+import Game from "../pages/Home";
+import { AnimatePresence } from "framer-motion";
 
 const MyRoutes = () => {
+    const location = useLocation();
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Soon />} />
-                <Route path="/test" element={<Test />} />
+        <AnimatePresence>
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Game />} />
             </Routes>
-        </BrowserRouter >
+        </AnimatePresence>
     );
 };
 

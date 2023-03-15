@@ -40,3 +40,27 @@ a {
   text-decoration: underline;
   color: whitesmoke;
 }
+
+.startButton {
+  background-color: var(--sd);
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.startButton:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  font-size: small;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
