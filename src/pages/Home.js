@@ -1,10 +1,7 @@
-import logo from '../images/LOGO.png';
-import '../App.css';
-import { FaHome, FaInstagram } from 'react-icons/fa';
-import { easeOut, motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { wrap } from "popmotion";
+import { useEffect, useRef, useState } from 'react';
+import Game1 from './gamePages/Game1';
+import Game2 from './gamePages/Game2';
+import Game0 from './gamePages/Game0';
 
 const variants = {
     enter: () => {
@@ -45,90 +42,47 @@ const item = {
 function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useState(0);
+    const timeOutRef = useRef();
+    const PAGE_COUNT = 3;
+
     useEffect(() => {
-        if (page == 2) {
-            setTimeout(() => {
-                setPage((page + 1) % 3)
+        if (page === 2) {
+            timeOutRef.current = setTimeout(() => {
+                setPage((page + 1) % PAGE_COUNT)
             }, 5000)
         }
-        setPage(page % 3);
-    })
+        if (page >= PAGE_COUNT) {
+            setPage(page % PAGE_COUNT)
+        }
+        return () => {
+            clearTimeout(timeOutRef.current)
+        }
+    }, [page])
+
     const handleChange = event => {
         setName(event.target.value);
         console.log('value is:', event.target.value);
     };
+
     switch (page) {
         case 0: {
             return (
-                <motion.div className="App"
-                    key={page}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
-                >
-                    <img src={logo} style={{ height: 200 }}></img>
-                    <h1>พรรคเพื่อจุฬา ฯ</h1>
-                    <a href="https://www.instagram.com/pheuchula_party/"><h2> <FaInstagram /> instagram</h2></a>
-                    <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        onHoverStart={e => { }}
-                        onHoverEnd={e => { }}
-                        className="startButton" onClick={() => setPage((page => page + 1))}>ตามหาไพ่ของคุณกัน!</motion.button>
-                </motion.div >
+                <Game0 page={page} setPage={setPage} name={name} variants={variants} handleChange={handleChange} />
             );
         }
         case 1: {
             return (
-                <motion.div className="App"
-                    key={page}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
-                >
-                    <h2>สวัสดี บอกชื่อกันหน่อยสิ</h2>
-                    <input type="text"
-                        className="login__input"
-                        placeholder="ชื่อเล่น"
-                        onChange={handleChange}
-                        value={name}></input><br /><br />
-                    {name ?
-                        <motion.button whileHover={{ scale: 1.1 }}
-                            onHoverStart={e => { }}
-                            onHoverEnd={e => { }}
-                            className="startButton" onClick={() => setPage((page => page + 1))}> ไปลุยกันเลย!!</motion.button>
-                        :
-                        <></>
-                    }
-                    <br />
-
-                    <a className="linkButton" onClick={() => setPage((page => page - 1))}>ย้อนกลับ</a>
-                </motion.div >
+                <Game1 page={page} setPage={setPage} name={name} variants={variants} handleChange={handleChange} />
             );
         }
         case 2: {
             return (
-                <motion.div className="App"
-                    key={page}
-                    variants={variants}
-                    initial="enter"
-                    animate="center"
-                    exit="exit"
-                    transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
-                >
-                    <motion.div
-                        variants={container}
-                        initial="hidden"
-                        animate="show">
-                        <motion.h1 variants={item}>สวัสดีนะ {name}!</motion.h1>
-                        <motion.h1 variants={item}>เรามาตามหาไพ่ของ{name}กันเถอะ!</motion.h1>
-                    </motion.div>
-                </motion.div >
+                <Game2 page={page} name={name} variants={variants} container={container} item={item} />
             );
         }
+        default:
+            return null;
+
     }
 }
 
