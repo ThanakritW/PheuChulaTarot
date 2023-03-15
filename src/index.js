@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import MyRoutes from './routes/myroutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <div class="desktopBackground">
+      <div class="innerContent">
+        <MyRoutes />
+      </div>
+    </div>
   </React.StrictMode>
 );
 
