@@ -95,10 +95,16 @@ function Animated() {
                         placeholder="ชื่อเล่น"
                         onChange={handleChange}
                         value={name}></input><br /><br />
-                    <motion.button whileHover={{ scale: 1.1 }}
-                        onHoverStart={e => { }}
-                        onHoverEnd={e => { }}
-                        className="startButton" onClick={() => setPage((page => page + 1))}> ไปลุยกันเลย!!</motion.button><br />
+                    {name ?
+                        <motion.button whileHover={{ scale: 1.1 }}
+                            onHoverStart={e => { }}
+                            onHoverEnd={e => { }}
+                            className="startButton" onClick={() => setPage((page => page + 1))}> ไปลุยกันเลย!!</motion.button>
+                        :
+                        <></>
+                    }
+                    <br />
+
                     <a className="linkButton" onClick={() => setPage((page => page - 1))}>ย้อนกลับ</a>
                 </motion.div >
             );
@@ -118,7 +124,7 @@ function Animated() {
                         initial="hidden"
                         animate="show">
                         <motion.h1 variants={item}>สวัสดีนะ {name}!</motion.h1>
-                        <motion.h1 variants={item}>เราไปตามหาไพ่ของ{name}กันเถอะ!</motion.h1>
+                        <motion.h1 variants={item}>เรามาตามหาไพ่ของ{name}กันเถอะ!</motion.h1>
                     </motion.div>
                 </motion.div >
             );
