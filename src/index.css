@@ -38,9 +38,9 @@ code {
   flex: 0;
   min-height: 100vh;
   flex-direction: column;
+  flex: 0 1 500px;
   justify-content: center;
   background-color: var(--pm);
-  min-width: 500px !important;
 }
 
 a {

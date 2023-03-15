@@ -65,6 +65,7 @@ function Animated() {
                     <button whileHover={{ scale: 1.1 }}
                         onHoverStart={e => { }}
                         onHoverEnd={e => { }}
+                        whileTap={{ scale: 0.9 }}
                         className="startButton" onClick={() => setPage((page => page + 1))}>click here get back</button>
                 </motion.div >
             );
