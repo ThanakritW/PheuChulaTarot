@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import Game1 from './gamePages/Game1';
 import Game2 from './gamePages/Game2';
 import Game0 from './gamePages/Game0';
+import Game3 from './gamePages/Game3';
 
 const variants = {
     enter: () => {
@@ -43,7 +44,7 @@ function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useState(0);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 3;
+    const PAGE_COUNT = 4;
 
     useEffect(() => {
         if (page === 2) {
@@ -78,6 +79,11 @@ function Animated() {
         case 2: {
             return (
                 <Game2 page={page} name={name} variants={variants} container={container} item={item} />
+            );
+        }
+        case 3: {
+            return (
+                <Game3 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
             );
         }
         default:
