@@ -12,6 +12,7 @@
 }
 
 body {
+  max-height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -51,6 +52,9 @@ a {
   min-height: 100vh;
   flex-direction: column;
   flex: 0 1 500px;
+  max-width: 100%;
+  overflow-x: hidden;
+  max-height: 100vh;
   padding: 0px 10px;
   justify-content: center;
   background-color: var(--pm);
@@ -138,6 +142,7 @@ footer {
   max-width: 90%;
   border-radius: 10px;
   font-size: large;
+  word-wrap: break-word;
 }
 
 .button-container {

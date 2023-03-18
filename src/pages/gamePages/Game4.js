@@ -1,6 +1,5 @@
 import { easeOut, motion } from 'framer-motion';
 import GameButton from '../component/GameButton';
-import alarm from '../../assets/images/alarm-clock.png';
 const Game4 = ({
     page,
     setPage,
@@ -24,7 +23,7 @@ const Game4 = ({
                 variants={container}
                 initial="hidden"
                 animate="show">
-                <GameButton content={"อยู่บ้านนอนเล่น"} toPage={1} setPage={setPage} ></GameButton>
+                <GameButton content={"อยู่บ้านนอนเล่นtesttesttestasdasdasdasdsadsadasdasdasdasdasdasdasddasdadasdasdasdas"} toPage={1} setPage={setPage} ></GameButton>
                 <GameButton content={"โทรชวนเพื่อนไปเที่ยว"} toPage={2} setPage={setPage} ></GameButton>
                 <GameButton content={"ออกไปเดินเล่นดีกว่า"} toPage={3} setPage={setPage} ></GameButton>
             </motion.div>
