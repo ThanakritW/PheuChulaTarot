@@ -51,6 +51,7 @@ a {
   min-height: 100vh;
   flex-direction: column;
   flex: 0 1 500px;
+  padding: 0px 10px;
   justify-content: center;
   background-color: var(--pm);
 }
@@ -124,4 +125,25 @@ footer {
 
 .linkButton:hover {
   color: #171717;
+}
+
+.game-button {
+  font-family: Mitr;
+  background-color: var(--sd);
+  color: #ede9fe;
+  border: 0;
+  padding: 10px;
+  margin: 10px;
+  min-width: 80%;
+  max-width: 90%;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.button-container {
+  display: flex;
+  flex: 0 1 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

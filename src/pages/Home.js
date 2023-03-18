@@ -3,6 +3,7 @@ import Game1 from './gamePages/Game1';
 import Game2 from './gamePages/Game2';
 import Game0 from './gamePages/Game0';
 import Game3 from './gamePages/Game3';
+import Game4 from './gamePages/Game4';
 
 const variants = {
     enter: () => {
@@ -29,7 +30,16 @@ const container = {
         }
     }
 }
-
+const choiceContainer = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.5
+        }
+    }
+}
 const item = {
     hidden: { opacity: 0 },
     show: {
@@ -44,7 +54,7 @@ function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useState(0);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 4;
+    const PAGE_COUNT = 5;
 
     useEffect(() => {
         if (page === 2) {
@@ -85,6 +95,11 @@ function Animated() {
             return (
                 <Game3 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
             );
+        }
+        case 4: {
+            return (
+                <Game4 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
+            )
         }
         default:
             return null;
