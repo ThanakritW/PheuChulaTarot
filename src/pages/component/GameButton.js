@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { ScoreContext } from './ScoreContext';
 
 const item = {
     hidden: { opacity: 0 },
@@ -11,15 +13,19 @@ const item = {
 }
 
 const GameButton = ({
-    score,
-    setScore,
     toPage,
     setPage,
+    type,
+    value,
     content
 }) => {
-
-    const handleClick = event => {
+    const [score, setScore] = useContext(ScoreContext);
+    const handleClick = (e) => {
         setPage(toPage);
+        setScore({
+            ...score,
+            [type]: score[type] + value,
+        });
     };
 
     return (

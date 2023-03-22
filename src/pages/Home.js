@@ -52,7 +52,7 @@ const item = {
 
 function Animated() {
     const [name, setName] = useState('');
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState(4);
     const timeOutRef = useRef();
     const PAGE_COUNT = 5;
 

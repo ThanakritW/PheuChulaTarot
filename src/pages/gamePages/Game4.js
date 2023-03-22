@@ -23,9 +23,9 @@ const Game4 = ({
                 variants={container}
                 initial="hidden"
                 animate="show">
-                <GameButton content={"อยู่บ้านนอนเล่นtesttesttestasdasdasdasdsadsadasdasdasdasdasdasdasddasdadasdasdasdas"} toPage={1} setPage={setPage} ></GameButton>
-                <GameButton content={"โทรชวนเพื่อนไปเที่ยว"} toPage={2} setPage={setPage} ></GameButton>
-                <GameButton content={"ออกไปเดินเล่นดีกว่า"} toPage={3} setPage={setPage} ></GameButton>
+                <GameButton content={"อยู่บ้านนอนเล่น"} toPage={1} setPage={setPage} type={'IE'} value={1}></GameButton>
+                <GameButton content={"โทรชวนเพื่อนไปเที่ยว"} toPage={2} setPage={setPage} type={'IE'} value={2}></GameButton>
+                <GameButton content={"ออกไปเดินเล่นดีกว่า"} toPage={3} setPage={setPage} type={'IE'} value={3}></GameButton>
             </motion.div>
         </motion.div >
     );
