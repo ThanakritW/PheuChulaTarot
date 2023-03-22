@@ -25,9 +25,10 @@ const Game0 = ({
                     onHoverEnd={e => { }}
                     className="startButton" onClick={() => setPage((page => page + 1))}>ตามหาไพ่ของคุณกัน!</motion.button>
             </motion.div >
-            <footer style={{ justifyContent: "center", height: "60px" }}>
+            <footer style={{ justifyContent: "center", height: "80px" }}>
                 <p>จัดทำโดยคณะผู้จัดทำพรรคเพื่อจุฬาฯ #1 | วันที่ 15 มีนาคม 2566<br />
-                    31 มีนาคม 2566 เลือกตั้งผ่าน CUNEX
+                    31 มีนาคม 2566 เลือกตั้งผ่าน CUNEX<br />
+                    <a className='credit' href="https://www.flaticon.com/" title="icons">All icons created by Freepik - Flaticon</a>
                 </p>
             </footer>
         </div >);

@@ -92,6 +92,20 @@ footer {
   text-align: center;
 }
 
+.m-0 {
+  margin: 0px;
+}
+
+.credit {
+  font-size: small;
+  text-decoration: none;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
 .login__input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }

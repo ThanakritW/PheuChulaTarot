@@ -1,11 +1,16 @@
 import { easeOut, motion } from 'framer-motion';
+
 const Game1 = ({
     page,
     setPage,
     variants,
     name,
-    handleChange
+    setName
 }) => {
+    const handleChange = event => {
+        setName(event.target.value);
+        console.log('value is:', event.target.value);
+    };
     return (<motion.div className="App"
         key={page}
         variants={variants}
