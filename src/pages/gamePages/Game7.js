@@ -26,8 +26,8 @@ const Game7 = ({
                 initial="hidden"
                 animate="show">
                 <GameButton content={"รู้แล้วหน่าว่าตื่นเต้น ไหนอาการเป็นยังไง เล่ามาซิ"} toPage={8} setPage={setPage} type={'TF'} value={-2}></GameButton>
-                <GameButton content={"ห๊าาา ที่ไหน เกิดอะไรขึ้น"} toPage={8} setPage={setPage} type={'TF'} value={-1}></GameButton>
                 <GameButton content={"แกเป็นไงบ้าง ยังอยู่ดีมั้ยหรือใจลอยไปกับเขาแล้ว >~<"} toPage={8} setPage={setPage} type={'TF'} value={1}></GameButton>
+                <GameButton content={"ห๊าาา ที่ไหน เกิดอะไรขึ้น"} toPage={8} setPage={setPage} type={'TF'} value={-1}></GameButton>
                 <GameButton content={"หึ้ยย โอกาสมาแล้ว เข้าไปจีบเลยๆๆ"} toPage={8} setPage={setPage} type={'TF'} value={2}></GameButton>
             </motion.div>
         </motion.div >

@@ -7,6 +7,9 @@ import Game4 from './gamePages/Game4';
 import Game5 from './gamePages/Game5';
 import Game6 from './gamePages/Game6';
 import Game7 from './gamePages/Game7';
+import Game8 from './gamePages/Game8';
+import Game9 from './gamePages/Game9';
+
 
 const variants = {
     enter: () => {
@@ -29,7 +32,7 @@ const container = {
         opacity: 1,
         transition: {
             duration: 1,
-            staggerChildren: 1.5
+            staggerChildren: 1.25
         }
     }
 }
@@ -57,7 +60,7 @@ function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useState(0);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 8;
+    const PAGE_COUNT = 10;
 
     useEffect(() => {
         if (page === 2) {
@@ -112,6 +115,16 @@ function Animated() {
         case 7: {
             return (
                 <Game7 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
+            )
+        }
+        case 8: {
+            return (
+                <Game8 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+            );
+        }
+        case 9: {
+            return (
+                <Game9 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
             )
         }
         default:
