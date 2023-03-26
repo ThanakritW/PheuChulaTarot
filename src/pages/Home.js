@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useContext } from 'react';
+import { PageContext } from './component/PageContext';
 import Game1 from './gamePages/Game1';
 import Game2 from './gamePages/Game2';
 import Game0 from './gamePages/Game0';
@@ -13,7 +14,6 @@ import Game10 from './gamePages/Game10';
 import Game11 from './gamePages/Game11';
 import Game13 from './gamePages/Game13';
 import Game12 from './gamePages/Game12';
-import { PageContext } from './component/PageContext';
 import Game14 from './gamePages/Game14';
 import Game15 from './gamePages/Game15';
 import Game16 from './gamePages/Game16';
@@ -24,6 +24,17 @@ import Game20 from './gamePages/Game20';
 import Game21 from './gamePages/Game21';
 import Game22 from './gamePages/Game22';
 import Game23 from './gamePages/Game23';
+import Game24 from './gamePages/Game24';
+import Game25 from './gamePages/Game25';
+import Game26 from './gamePages/Game26';
+import Game27 from './gamePages/Game27';
+import Game28 from './gamePages/Game28';
+import Game29 from './gamePages/Game29';
+import Game30 from './gamePages/Game30';
+import Game31 from './gamePages/Game31';
+import Game32 from './gamePages/Game32';
+import Game33 from './gamePages/Game33';
+import Game34 from './gamePages/Game34';
 
 const variants = {
     enter: () => {
@@ -211,9 +222,63 @@ function Animated() {
                 <Game23 name={name} variants={variants} container={choiceContainer} />
             )
         }
+        case 24: {
+            return (
+                <Game24 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 25: {
+            return (
+                <Game25 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 26: {
+            return (
+                <Game26 name={name} variants={variants} container={choiceContainer} />
+            )
+        }
+        case 27: {
+            return (
+                <Game27 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 28: {
+            return (
+                <Game28 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 29: {
+            return (
+                <Game29 name={name} variants={variants} container={choiceContainer} />
+            )
+        }
+        case 30: {
+            return (
+                <Game30 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 31: {
+            return (
+                <Game31 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 32: {
+            return (
+                <Game32 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 33: {
+            return (
+                <Game33 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 34: {
+            return (
+                <Game34 name={name} variants={variants} container={container} item={item} />
+            )
+        }
         default:
             return <Game0 variants={variants} />;
-
     }
 }
 
