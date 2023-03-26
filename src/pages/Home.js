@@ -11,6 +11,8 @@ import Game8 from './gamePages/Game8';
 import Game9 from './gamePages/Game9';
 import Game10 from './gamePages/Game10';
 import Game11 from './gamePages/Game11';
+import Game13 from './gamePages/Game13';
+import Game12 from './gamePages/Game12';
 
 const variants = {
     enter: () => {
@@ -61,7 +63,7 @@ function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useState(0);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 12;
+    const PAGE_COUNT = 14;
 
     useEffect(() => {
         if (page === 2) {
@@ -137,6 +139,16 @@ function Animated() {
             return (
                 <Game11 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
             )
+        }
+        case 12: {
+            return (
+                <Game12 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+            );
+        }
+        case 13: {
+            return (
+                <Game13 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+            );
         }
         default:
             return null;
