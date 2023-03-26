@@ -23,10 +23,10 @@ const Game17 = ({
                 variants={container}
                 initial="hidden"
                 animate="show">
+                <GameButton content={"ตุ๊กตาแมวน่ารักๆ"} toPage={20} setPage={setPage} type={'TF'} value={1}></GameButton>
                 <GameButton content={"เซ็ทเครื่องเขียนเรียบง่าย"} toPage={18} setPage={setPage} type={'TF'} value={-2}></GameButton>
-                <GameButton content={"นาฬิกาข้อมือสวยหรู"} toPage={19} setPage={setPage} type={'TF'} value={2}></GameButton>
-                <GameButton content={"ตุ๊กตาแมวน่ารักๆ"} toPage={20} setPage={setPage} type={'TF'} value={-1}></GameButton>
-                <GameButton content={"ดอกไม้ช่อโตกลิ่นหอม"} toPage={21} setPage={setPage} type={'TF'} value={1}></GameButton>
+                <GameButton content={"ดอกไม้ช่อโตกลิ่นหอม"} toPage={21} setPage={setPage} type={'TF'} value={2}></GameButton>
+                <GameButton content={"นาฬิกาข้อมือสวยหรู"} toPage={19} setPage={setPage} type={'TF'} value={-1}></GameButton>
             </motion.div>
         </motion.div >
     );

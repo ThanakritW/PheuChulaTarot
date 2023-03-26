@@ -18,6 +18,12 @@ import Game14 from './gamePages/Game14';
 import Game15 from './gamePages/Game15';
 import Game16 from './gamePages/Game16';
 import Game17 from './gamePages/Game17';
+import Game18 from './gamePages/Game18';
+import Game19 from './gamePages/Game19';
+import Game20 from './gamePages/Game20';
+import Game21 from './gamePages/Game21';
+import Game22 from './gamePages/Game22';
+import Game23 from './gamePages/Game23';
 
 const variants = {
     enter: () => {
@@ -173,6 +179,36 @@ function Animated() {
         case 17: {
             return (
                 <Game17 name={name} variants={variants} container={choiceContainer} />
+            )
+        }
+        case 18: {
+            return (
+                <Game18 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 19: {
+            return (
+                <Game19 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 20: {
+            return (
+                <Game20 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 21: {
+            return (
+                <Game21 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 22: {
+            return (
+                <Game22 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 23: {
+            return (
+                <Game23 name={name} variants={variants} container={choiceContainer} />
             )
         }
         default:
