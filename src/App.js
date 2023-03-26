@@ -11,8 +11,8 @@ function App() {
     'TF': 0
   });
   return (
-    <div class="desktopBackground">
-      <div class="innerContent">
+    <div className="desktopBackground">
+      <div className="innerContent">
         <BrowserRouter>
           <ScoreContext.Provider value={[score, setScore]}>
             <MyRoutes />
