@@ -18,7 +18,7 @@ const Game1 = ({
         exit="exit"
         transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
     >
-        <h2 >สวัสดี บอกชื่อกันหน่อยสิ</h2>
+        <h1 >สวัสดี บอกชื่อกันหน่อยสิ</h1>
         <input type="text"
             className="login__input"
             placeholder="ชื่อเล่น"
