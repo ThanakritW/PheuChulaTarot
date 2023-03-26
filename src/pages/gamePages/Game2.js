@@ -1,6 +1,5 @@
 import { easeOut, motion } from 'framer-motion';
 const Game2 = ({
-    page,
     variants,
     name,
     container,
@@ -8,7 +7,6 @@ const Game2 = ({
 }) => {
     return (
         <motion.div className="App color-white"
-            key={page}
             variants={variants}
             initial="enter"
             animate="center"

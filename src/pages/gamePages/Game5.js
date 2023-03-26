@@ -1,15 +1,16 @@
 import { easeOut, motion } from 'framer-motion';
 import phone from '../../assets/images/phone.png'
+import { useContext } from 'react';
+import { PageContext } from '../component/PageContext';
 const Game5 = ({
-    page,
-    setPage,
     variants,
     name,
     container,
     item
 }) => {
+    const [page, setPage] = useContext(PageContext);
     return (
-        <motion.div className="App color-white" onClick={() => setPage(page)}
+        <motion.div className="App color-white" onClick={() => setPage(7)}
             key={page}
             variants={variants}
             initial="enter"

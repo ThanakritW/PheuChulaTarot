@@ -1,13 +1,14 @@
 import { easeOut, motion } from 'framer-motion';
 import GameButton from '../component/GameButton';
+import { useContext } from 'react';
+import { PageContext } from '../component/PageContext';
 const Game7 = ({
-    page,
-    setPage,
     variants,
     container,
     item,
     name
 }) => {
+    const [page, setPage] = useContext(PageContext);
     return (
         <motion.div className="App color-white"
             style={{ display: "flex", flexDirection: 'column' }}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import Game1 from './gamePages/Game1';
 import Game2 from './gamePages/Game2';
 import Game0 from './gamePages/Game0';
@@ -13,6 +13,7 @@ import Game10 from './gamePages/Game10';
 import Game11 from './gamePages/Game11';
 import Game13 from './gamePages/Game13';
 import Game12 from './gamePages/Game12';
+import { PageContext } from './component/PageContext';
 
 const variants = {
     enter: () => {
@@ -61,7 +62,7 @@ const item = {
 
 function Animated() {
     const [name, setName] = useState('');
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useContext(PageContext);
     const timeOutRef = useRef();
     const PAGE_COUNT = 14;
 
@@ -77,77 +78,77 @@ function Animated() {
         return () => {
             clearTimeout(timeOutRef.current)
         }
-    }, [page])
+    }, [page, setPage])
 
     switch (page) {
         case 0: {
             return (
-                <Game0 page={page} setPage={setPage} name={name} variants={variants} />
+                <Game0 variants={variants} />
             );
         }
         case 1: {
             return (
-                <Game1 page={page} setPage={setPage} name={name} variants={variants} setName={setName} />
+                <Game1 name={name} variants={variants} setName={setName} />
             );
         }
         case 2: {
             return (
-                <Game2 page={page} name={name} variants={variants} container={container} item={item} />
+                <Game2 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 3: {
             return (
-                <Game3 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game3 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 4: {
             return (
-                <Game4 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
+                <Game4 name={name} variants={variants} container={choiceContainer} />
             )
         }
         case 5: {
             return (
-                <Game5 page={7} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game5 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 6: {
             return (
-                <Game6 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game6 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 7: {
             return (
-                <Game7 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
+                <Game7 name={name} variants={variants} container={choiceContainer} />
             )
         }
         case 8: {
             return (
-                <Game8 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game8 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 9: {
             return (
-                <Game9 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
+                <Game9 name={name} variants={variants} container={choiceContainer} />
             )
         }
         case 10: {
             return (
-                <Game10 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game10 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 11: {
             return (
-                <Game11 page={page} name={name} variants={variants} container={choiceContainer} setPage={setPage} />
+                <Game11 name={name} variants={variants} container={choiceContainer} />
             )
         }
         case 12: {
             return (
-                <Game12 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game12 name={name} variants={variants} container={container} item={item} />
             );
         }
         case 13: {
             return (
-                <Game13 page={page} name={name} variants={variants} container={container} item={item} setPage={setPage} />
+                <Game13 name={name} variants={variants} container={container} item={item} />
             );
         }
         default:

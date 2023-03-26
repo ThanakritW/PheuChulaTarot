@@ -1,11 +1,12 @@
 import logo from '../../assets/images/LOGO.png'
 import { FaInstagram } from 'react-icons/fa';
 import { easeOut, motion } from 'framer-motion';
+import { useContext } from 'react';
+import { PageContext } from '../component/PageContext';
 const Game0 = ({
-    page,
-    setPage,
     variants,
 }) => {
+    const [page, setPage] = useContext(PageContext);
     return (
         <div>
             <motion.div className="App"

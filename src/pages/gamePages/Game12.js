@@ -1,13 +1,14 @@
 import { easeOut, motion } from 'framer-motion';
 import angry from '../../assets/images/Angry.png'
+import { useContext } from 'react';
+import { PageContext } from '../component/PageContext';
 const Game12 = ({
-    page,
-    setPage,
     variants,
     name,
     container,
     item
 }) => {
+    const [page, setPage] = useContext(PageContext);
     return (
         <motion.div className="App color-white" onClick={() => setPage((page => page + 1))}
             key={page}

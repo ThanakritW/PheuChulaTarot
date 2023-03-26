@@ -1,12 +1,13 @@
 import { easeOut, motion } from 'framer-motion';
+import { useContext } from 'react';
+import { PageContext } from '../component/PageContext';
 const Game8 = ({
-    page,
-    setPage,
     variants,
     name,
     container,
     item
 }) => {
+    const [page, setPage] = useContext(PageContext);
     return (
         <motion.div className="App color-white" onClick={() => setPage((page => page + 1))}
             key={page}

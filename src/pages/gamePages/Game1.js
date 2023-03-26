@@ -1,12 +1,12 @@
 import { easeOut, motion } from 'framer-motion';
-
+import { useContext } from 'react';
+import { PageContext } from '../component/PageContext';
 const Game1 = ({
-    page,
-    setPage,
     variants,
     name,
     setName
 }) => {
+    const [page, setPage] = useContext(PageContext);
     const handleChange = event => {
         setName(event.target.value);
     };
