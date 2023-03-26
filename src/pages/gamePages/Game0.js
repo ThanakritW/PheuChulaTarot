@@ -17,7 +17,7 @@ const Game0 = ({
                 exit="exit"
                 transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
             >
-                <img src={logo} style={{ height: 200 }} alt="logo"></img>
+                <img src={logo} style={{ height: 150 }} alt="logo"></img>
                 <h1 className="color-white">พรรคเพื่อจุฬา ฯ</h1>
                 <a href="https://www.instagram.com/pheuchula_party/"><h2> <FaInstagram /> instagram</h2></a>
                 <motion.button

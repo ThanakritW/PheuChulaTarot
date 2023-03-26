@@ -14,6 +14,7 @@ import Game11 from './gamePages/Game11';
 import Game13 from './gamePages/Game13';
 import Game12 from './gamePages/Game12';
 import { PageContext } from './component/PageContext';
+import Game14 from './gamePages/Game14';
 
 const variants = {
     enter: () => {
@@ -64,7 +65,7 @@ function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useContext(PageContext);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 14;
+    const PAGE_COUNT = 15;
 
     useEffect(() => {
         if (page === 2) {
@@ -150,6 +151,11 @@ function Animated() {
             return (
                 <Game13 name={name} variants={variants} container={container} item={item} />
             );
+        }
+        case 14: {
+            return (
+                <Game14 name={name} variants={variants} container={choiceContainer} />
+            )
         }
         default:
             return null;
