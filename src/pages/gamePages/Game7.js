@@ -5,7 +5,6 @@ import { PageContext } from '../component/PageContext';
 const Game7 = ({
     variants,
     container,
-    item,
     name
 }) => {
     const [page, setPage] = useContext(PageContext);
@@ -19,8 +18,8 @@ const Game7 = ({
             exit="exit"
             transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
         >
-            <motion.h2 className='m-0' variants={item}>"{name}!! เค้าเจอคนที่แอบชอบด้วย!"</motion.h2>
-            <motion.h2 className='m-0' variants={item}>เสียงที่คุนหูดังขึ้น เสียงนั้นก็คือเพื่อนสนิทของ{name}นี่เอง</motion.h2>
+            <motion.h2 className='m-0'>"{name}!! เค้าเจอคนที่แอบชอบด้วย!"</motion.h2>
+            <motion.h2 className='m-0'>เสียงที่คุนหูดังขึ้น เสียงนั้นก็คือเพื่อนสนิทของ{name}นี่เอง</motion.h2>
             <motion.div
                 className="button-container"
                 variants={container}

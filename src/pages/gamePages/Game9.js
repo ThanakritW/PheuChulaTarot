@@ -5,8 +5,6 @@ import { PageContext } from '../component/PageContext';
 const Game9 = ({
     variants,
     container,
-    item,
-    name
 }) => {
     const [page, setPage] = useContext(PageContext);
     return (
@@ -19,7 +17,7 @@ const Game9 = ({
             exit="exit"
             transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
         >
-            <motion.h2 className='m-0' variants={item}>หลังจากฟังเพื่อนของคุณเล่าจบ คุณก็เลยถามว่า...</motion.h2>
+            <motion.h2 className='m-0'>หลังจากฟังเพื่อนของคุณเล่าจบ คุณก็เลยถามว่า...</motion.h2>
             <motion.div
                 className="button-container"
                 variants={container}

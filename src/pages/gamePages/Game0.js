@@ -24,7 +24,7 @@ const Game0 = ({
                     whileHover={{ scale: 1.1 }}
                     onHoverStart={e => { }}
                     onHoverEnd={e => { }}
-                    className="startButton" onClick={() => setPage((page => page + 1))}>ตามหาไพ่ของคุณกัน!</motion.button>
+                    className="startButton" onClick={() => setPage(1)}>ตามหาไพ่ของคุณกัน!</motion.button>
             </motion.div >
             <footer style={{ justifyContent: "center", height: "80px" }}>
                 <p>จัดทำโดยคณะผู้จัดทำพรรคเพื่อจุฬาฯ #1 | วันที่ 15 มีนาคม 2566<br />
