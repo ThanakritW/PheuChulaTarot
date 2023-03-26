@@ -29,7 +29,7 @@ const container = {
         opacity: 1,
         transition: {
             duration: 1,
-            staggerChildren: 2.0
+            staggerChildren: 1.5
         }
     }
 }
@@ -39,7 +39,7 @@ const choiceContainer = {
         opacity: 1,
         transition: {
             duration: 0.7,
-            staggerChildren: 0.25
+            staggerChildren: 0.2
         }
     }
 }
@@ -48,7 +48,7 @@ const item = {
     show: {
         opacity: 1,
         transition: {
-            duration: 0.7
+            duration: 0.5
         }
     }
 }

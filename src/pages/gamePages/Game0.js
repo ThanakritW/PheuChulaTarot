@@ -8,7 +8,7 @@ const Game0 = ({
 }) => {
     return (
         <div>
-            <motion.div className="App  "
+            <motion.div className="App"
                 key={page}
                 variants={variants}
                 initial="enter"

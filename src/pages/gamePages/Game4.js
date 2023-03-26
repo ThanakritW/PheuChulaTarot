@@ -17,7 +17,7 @@ const Game4 = ({
             exit="exit"
             transition={{ duration: 1, ease: easeOut, delay: 0.2 }}
         >
-            <motion.h1 variants={item}>เฮ้อ ไหน ๆ ก็ตื่นแล้ว ทำอะไรดีนะ</motion.h1>
+            <motion.h2 variants={item}>เฮ้อ ไหน ๆ ก็ตื่นแล้ว ทำอะไรดีนะ...</motion.h2>
             <motion.div
                 className="button-container"
                 variants={container}

@@ -9,7 +9,6 @@ const Game1 = ({
 }) => {
     const handleChange = event => {
         setName(event.target.value);
-        console.log('value is:', event.target.value);
     };
     return (<motion.div className="App"
         key={page}

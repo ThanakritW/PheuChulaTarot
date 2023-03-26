@@ -28,7 +28,7 @@ const Game5 = ({
                     }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: [0.25, 1] }}
-                    transition={{ repeat: Infinity, repeatType: "reverse", duration: 2.5 }}>
+                    transition={{ repeat: Infinity, repeatType: "reverse", duration: 1.0 }}>
                 </motion.img>
                 <motion.h2 variants={item}>"นอนต่ออีกสักนิดคงไม่เป็นอะไร.."</motion.h2>
                 <motion.h2 variants={item}>คุณบอกกับตัวเองแต่แล้ว...</motion.h2>
