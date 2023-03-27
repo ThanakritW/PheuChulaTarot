@@ -97,22 +97,15 @@ function Animated() {
             timeOutRef.current = setTimeout(() => {
                 setPage((page + 1) % PAGE_COUNT)
             }, 5000);
-            // eslint-disable-next-line
             setScore({
-                // eslint-disable-next-line
                 ['IE']: 0,
-                // eslint-disable-next-line
                 ['TF']: 0,
-                // eslint-disable-next-line
                 ['NS']: 0,
             });
         }
         if (page >= PAGE_COUNT) {
             setPage(page % PAGE_COUNT)
         }
-        console.log(score['IE']);
-        console.log(score['TF']);
-        console.log(score['NS']);
         return () => {
             clearTimeout(timeOutRef.current)
         }
