@@ -29,7 +29,7 @@ const Game0 = ({
             <footer style={{ justifyContent: "center", height: "80px" }}>
                 <p>จัดทำโดยคณะผู้จัดทำพรรคเพื่อจุฬาฯ #1 | วันที่ 15 มีนาคม 2566<br />
                     31 มีนาคม 2566 เลือกตั้งผ่าน CUNEX<br />
-                    <a className='credit' href="https://www.flaticon.com/" title="icons">All icons created by Freepik - Flaticon</a>
+                    <a className='credit' href="https://www.flaticon.com/" title="icons">All icons provided by Freepik - Flaticon</a>
                 </p>
             </footer>
         </div >);

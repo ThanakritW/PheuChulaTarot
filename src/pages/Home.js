@@ -35,6 +35,7 @@ import Game31 from './gamePages/Game31';
 import Game32 from './gamePages/Game32';
 import Game33 from './gamePages/Game33';
 import Game34 from './gamePages/Game34';
+import { ScoreContext } from './component/ScoreContext';
 
 const variants = {
     enter: () => {
@@ -84,6 +85,7 @@ const item = {
 function Animated() {
     const [name, setName] = useState('');
     const [page, setPage] = useContext(PageContext);
+    const [score, setScore] = useContext(ScoreContext);
     const timeOutRef = useRef();
     const PAGE_COUNT = 36;
 
@@ -91,11 +93,19 @@ function Animated() {
         if (page === 2) {
             timeOutRef.current = setTimeout(() => {
                 setPage((page + 1) % PAGE_COUNT)
-            }, 5000)
+            }, 5000);
+            setScore({
+                ['IE']: 0,
+                ['TF']: 0,
+                ['NS']: 0,
+            });
         }
         if (page >= PAGE_COUNT) {
             setPage(page % PAGE_COUNT)
         }
+        console.log(score['IE']);
+        console.log(score['TF']);
+        console.log(score['NS']);
         return () => {
             clearTimeout(timeOutRef.current)
         }
