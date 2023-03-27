@@ -11,7 +11,7 @@ function App() {
     'NS': 0,
     'TF': 0
   });
-  const [page, setPage] = useState(35);
+  const [page, setPage] = useState(34);
   return (
     <div className="desktopBackground">
       <div className="innerContent">

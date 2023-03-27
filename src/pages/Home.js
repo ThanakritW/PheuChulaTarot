@@ -290,7 +290,7 @@ function Animated() {
         }
         case 35: {
             return (
-                <Result name={name} variants={variants} container={container} item={item} />
+                <Result name={name} container={container} item={item} />
             )
         }
         default:

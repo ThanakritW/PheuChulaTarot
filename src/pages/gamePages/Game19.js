@@ -4,7 +4,6 @@ import { useContext } from 'react';
 import { PageContext } from '../component/PageContext';
 const Game19 = ({
     variants,
-    name,
     container,
     item
 }) => {

@@ -31,7 +31,7 @@ const Game27 = ({
                     }}
                     initial={{ transform: 0 }}
                     animate={{ transform: ["translate(5px,0)", "translate(-10px,0)"] }}
-                    transition={{ repeat: Infinity, repeatType: "reverse", duration: 1 }}>
+                    transition={{ ease: "easeIn", repeat: Infinity, repeatType: "reverse", duration: 1 }}>
                 </motion.img>
                 <motion.h2 variants={item}>รู้ตัวอีกทีก็ถึงเวลาเลิกราซะแล้ว</motion.h2>
             </motion.div>
