@@ -1,5 +1,5 @@
 import { easeOut, motion } from 'framer-motion';
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext } from 'react';
 import { PageContext } from '../component/PageContext';
 import { ScoreContext } from '../component/ScoreContext';
 import MAG from '../../assets/images/CardIcon/MAG.png'
@@ -67,8 +67,8 @@ const Result = ({
 }) => {
     const [page, setPage] = useContext(PageContext);
     const [score, setScore] = useContext(ScoreContext);
-
     function getCardType() {
+        setScore(score);
         if (score.IE < 0) {
             if (score.NS < 0) {
                 if (score.TF < 0) { //INT
@@ -102,50 +102,50 @@ const Result = ({
                 animate={{ opacity: 1, transform: "translate(0,0)" }}
                 transition={{ duration: 0.5, ease: easeOut }}
             >
-                <>
-                    <div className="drop-shadow"
+
+                <div className="drop-shadow"
+                    style={{
+                        backgroundColor: "white",
+                        minHeight: "60vh",
+                        width: "80%",
+                        margin: "auto",
+                        padding: "20px",
+                        justifySelf: "center",
+                        border: "10px solid",
+                        borderColor: "#64497E",
+                        borderRadius: "20px",
+                        display: "flex",
+                        flexDirection: "column",
+                        flex: "1 1 auto",
+                        color: "#171717"
+                    }}>
+                    <motion.img src={data.PIC[cardType]}
                         style={{
-                            backgroundColor: "white",
-                            height: "60vh",
-                            width: "80%",
-                            margin: "auto",
-                            padding: "20px",
-                            justifySelf: "center",
-                            border: "10px solid",
-                            borderColor: "#64497E",
-                            borderRadius: "20px",
-                            display: "flex",
-                            flexDirection: "column",
-                            flex: "1 1 auto",
-                            color: "#171717"
-                        }}>
-                        <motion.img src={data.PIC[cardType]}
-                            style={{
-                                height: "20%",
-                                objectFit: "cover",
-                                alignSelf: "center"
-                            }}
-                            initial={{ rotate: 0 }}
-                            animate={{ rotate: [10, - 10] }}
-                            transition={{ repeat: Infinity, repeatType: "reverse", duration: 3.0 }}>
-                        </motion.img>
-                        <h1 className="cardHead color-sd">{data.NAME[cardType]}</h1>
-                        <hr style={{ margin: "0px", alignSelf: "center", borderColor: "#64497E", borderWidth: "2px", width: "80%" }} />
-                        <h2 className="cardContent">{data.Detail[cardType]}</h2>
-                    </div>
-                    <br />
-                    <motion.div>
-                        <motion.button
-                            className="game-button drop-shadow"
-                            whileHover={{ scale: 1.1 }}
-                            onHoverStart={e => { }}
-                            onHoverEnd={e => { }}
-                            onClick={() => setPage((page + 1))}
-                        >
-                            ถัดไป
-                        </motion.button >
-                    </motion.div>
-                </>
+                            height: "15vh",
+                            objectFit: "cover",
+                            alignSelf: "center"
+                        }}
+                        initial={{ rotate: 0 }}
+                        animate={{ rotate: [10, - 10] }}
+                        transition={{ repeat: Infinity, repeatType: "reverse", duration: 3.0 }}>
+                    </motion.img>
+                    <h1 className="cardHead color-sd">{data.NAME[cardType]}</h1>
+                    <hr style={{ margin: "0px", alignSelf: "center", borderColor: "#64497E", borderWidth: "2px", width: "80%" }} />
+                    <h2 className="cardContent">{data.Detail[cardType]}</h2>
+                </div>
+                <br />
+                <motion.div>
+                    <motion.button
+                        className="game-button drop-shadow"
+                        whileHover={{ scale: 1.1 }}
+                        onHoverStart={e => { }}
+                        onHoverEnd={e => { }}
+                        onClick={() => setPage((page + 1))}
+                    >
+                        ถัดไป
+                    </motion.button >
+                </motion.div>
+                <br /><br />
             </motion.div >
         </div >
     );
