@@ -36,6 +36,7 @@ import Game32 from './gamePages/Game32';
 import Game33 from './gamePages/Game33';
 import Game34 from './gamePages/Game34';
 import { ScoreContext } from './component/ScoreContext';
+import Result from './gamePages/Result';
 
 const variants = {
     enter: () => {
@@ -285,6 +286,11 @@ function Animated() {
         case 34: {
             return (
                 <Game34 name={name} variants={variants} container={container} item={item} />
+            )
+        }
+        case 35: {
+            return (
+                <Result name={name} variants={variants} container={container} item={item} />
             )
         }
         default:

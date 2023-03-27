@@ -23,10 +23,10 @@ const Game14 = ({
                 variants={container}
                 initial="hidden"
                 animate="show">
-                <GameButton content={"ชุดที่เคยใส่ไปงานปาร์ตี้ก่อน แล้วคนชมว่าปังมาก!"} toPage={15} setPage={setPage} type={'NS'} value={-2}></GameButton>
-                <GameButton content={"ชุดที่ซื้อมาเมื่อนานมาแล้ว แต่ยังไม่เคยได้ลองใส่เลย ลองเปลี่ยนลุคบ้าง!"} toPage={15} setPage={setPage} type={'NS'} value={2}></GameButton>
-                <GameButton content={"ชุดหรูหรา ใส่ไปงานรับรองว่าใครก็ต้องจับตามอง!"} toPage={15} setPage={setPage} type={'NS'} value={-1}></GameButton>
-                <GameButton content={"ชุดที่แสดงออกถึงความเป็นตัวของเราเองนี่แหละดีสุดแล้ว!"} toPage={15} setPage={setPage} type={'NS'} value={1}></GameButton>
+                <GameButton content={"ชุดที่เคยใส่ไปงานปาร์ตี้ก่อน แล้วคนชมว่าปังมาก!"} toPage={15} setPage={setPage} type={'NS'} value={2}></GameButton>
+                <GameButton content={"ชุดที่ซื้อมาเมื่อนานมาแล้ว แต่ยังไม่เคยได้ลองใส่เลย ลองเปลี่ยนลุคบ้าง!"} toPage={15} setPage={setPage} type={'NS'} value={-2}></GameButton>
+                <GameButton content={"ชุดหรูหรา ใส่ไปงานรับรองว่าใครก็ต้องจับตามอง!"} toPage={15} setPage={setPage} type={'NS'} value={1}></GameButton>
+                <GameButton content={"ชุดที่แสดงออกถึงความเป็นตัวของเราเองนี่แหละดีสุดแล้ว!"} toPage={15} setPage={setPage} type={'NS'} value={-1}></GameButton>
             </motion.div>
         </motion.div >
     );

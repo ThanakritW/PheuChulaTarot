@@ -30,7 +30,7 @@ const Result = ({
             <motion.h1
                 initial={{ rotate: 0, transform: 0 }}
                 animate={{ transform: ["translate(0,5px)", "translate(0,-10px)"] }}
-                transition={{ ease: "easeInOut", repeat: Infinity, repeatType: "reverse", duration: 2 }}>"แตะเพื่อเปิดการ์ด"</motion.h1>
+                transition={{ ease: "easeInOut", repeat: Infinity, repeatType: "reverse", duration: 2 }}>"ทดสอบ"</motion.h1>
         </motion.div >
     );
 }
