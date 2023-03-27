@@ -55,6 +55,14 @@ h2 {
   color: #ede9fe !important;
 }
 
+.color-pm {
+  color: var(--pm);
+}
+
+.color-sd {
+  color: var(--sd);
+}
+
 .innerContent {
   display: flex;
   min-height: 100vh;
@@ -165,7 +173,6 @@ footer {
   border-radius: 10px;
   font-size: medium;
   word-wrap: break-word;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .game-button:hover {
@@ -180,10 +187,27 @@ footer {
   align-items: center;
 }
 
-.cardHead {
-  font-size: xx-large;
+@media screen and (min-width: 601px) {
+  .cardHead {
+    font-size: x-large;
+  }
+
+  .cardContent {
+    font-size: larger;
+  }
 }
 
-.cardContent {
-  font-size: larger;
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  .cardHead {
+    font-size: large;
+  }
+
+  .cardContent {
+    font-size: medium;
+  }
+}
+
+.drop-shadow {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }

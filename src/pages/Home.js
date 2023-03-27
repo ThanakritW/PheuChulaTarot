@@ -37,6 +37,7 @@ import Game33 from './gamePages/Game33';
 import Game34 from './gamePages/Game34';
 import { ScoreContext } from './component/ScoreContext';
 import Result from './gamePages/Result';
+import ResultIntro from './gamePages/ResultIntro';
 
 const variants = {
     enter: () => {
@@ -88,7 +89,7 @@ function Animated() {
     const [page, setPage] = useContext(PageContext);
     const [score, setScore] = useContext(ScoreContext);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 36;
+    const PAGE_COUNT = 37;
 
     useEffect(() => {
         if (page === 2) {
@@ -289,6 +290,11 @@ function Animated() {
             )
         }
         case 35: {
+            return (
+                <ResultIntro name={name} container={container} item={item} />
+            )
+        }
+        case 36: {
             return (
                 <Result name={name} container={container} item={item} />
             )

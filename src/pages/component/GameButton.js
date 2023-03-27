@@ -30,7 +30,7 @@ const GameButton = ({
 
     return (
         <motion.button
-            className="game-button"
+            className="game-button drop-shadow"
             variants={item}
             whileHover={{ scale: 1.1 }}
             onHoverStart={e => { }}
