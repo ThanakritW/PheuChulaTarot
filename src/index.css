@@ -56,11 +56,11 @@ h2 {
 }
 
 .color-pm {
-  color: var(--pm);
+  color: var(--pm) !important;
 }
 
 .color-sd {
-  color: var(--sd);
+  color: var(--sd) !important;
 }
 
 .innerContent {

@@ -38,6 +38,7 @@ import Game34 from './gamePages/Game34';
 import { ScoreContext } from './component/ScoreContext';
 import Result from './gamePages/Result';
 import ResultIntro from './gamePages/ResultIntro';
+import EndGame from './gamePages/EndGame';
 
 const variants = {
     enter: () => {
@@ -89,16 +90,20 @@ function Animated() {
     const [page, setPage] = useContext(PageContext);
     const [score, setScore] = useContext(ScoreContext);
     const timeOutRef = useRef();
-    const PAGE_COUNT = 37;
+    const PAGE_COUNT = 38;
 
     useEffect(() => {
         if (page === 2) {
             timeOutRef.current = setTimeout(() => {
                 setPage((page + 1) % PAGE_COUNT)
             }, 5000);
+            // eslint-disable-next-line
             setScore({
+                // eslint-disable-next-line
                 ['IE']: 0,
+                // eslint-disable-next-line
                 ['TF']: 0,
+                // eslint-disable-next-line
                 ['NS']: 0,
             });
         }
@@ -111,6 +116,7 @@ function Animated() {
         return () => {
             clearTimeout(timeOutRef.current)
         }
+        // eslint-disable-next-line
     }, [page, setPage])
 
     switch (page) {
@@ -297,6 +303,11 @@ function Animated() {
         case 36: {
             return (
                 <Result name={name} container={container} item={item} />
+            )
+        }
+        case 37: {
+            return (
+                <EndGame name={name} container={container} item={item} variants={variants} />
             )
         }
         default:
