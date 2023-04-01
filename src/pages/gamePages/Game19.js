@@ -21,7 +21,7 @@ const Game19 = ({
                 variants={container}
                 initial="hidden"
                 animate="show">
-                <motion.h1 variants={item}>"นาฬิกาข้อมือคง ต้องมีประโยชน์แน่!!"</motion.h1>
+                <motion.h1 variants={item}>"นาฬิกาข้อมือคงต้องมีประโยชน์แน่!!"</motion.h1>
                 <motion.h2 variants={item}>คุณหยิบนาฬิกาข้อมือเรียบง่ายมาแล้วเดินไปจ่ายเงิน</motion.h2>
                 <motion.h2 variants={item}>บรรจงห่อของขวัญ ก่อนเดินออกจากร้านไป</motion.h2>
             </motion.div>

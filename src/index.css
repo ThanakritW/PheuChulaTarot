@@ -93,6 +93,20 @@ a {
   font-size: large;
 }
 
+.startButtonDisabled {
+  font-family: Mitr;
+  background-color: var(--sd);
+  color: #ede9fe;
+  border: 0;
+  padding: 10px;
+  margin: 10px;
+  min-width: 40%;
+  border-radius: 10px;
+  font-size: large;
+  background-color: #64497ea1;
+  cursor: not-allowed;
+}
+
 .startButton:hover {
   text-decoration: underline;
   cursor: pointer;
